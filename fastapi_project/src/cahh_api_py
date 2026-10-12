@@ -1,0 +1,15 @@
+import requests
+
+def get_all_iteme():
+    url = 'http://127.0.0.1:8000/getItems/'
+
+    respoonse = requests.get(url)
+    if respoonse. status_code != 200:
+        return 'ERROR'
+    else:
+       respoonse = respoonse.json()
+       return respoonse  
+####################################################
+if __name__=='__main__':
+    result = get_all_iteme()
+    print('result:', result)
